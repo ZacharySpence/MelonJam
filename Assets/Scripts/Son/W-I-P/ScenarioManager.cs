@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ScenarioManager : MonoBehaviour
 { 
     public static ScenarioManager Instance;
-
+    
    
     private void Awake()
     {
@@ -19,9 +19,10 @@ public class ScenarioManager : MonoBehaviour
         }
         else { Destroy(this); }  
     }
-    [SerializeField] int affectionMeter;
+    
 
     [SerializeField] private GameObject textMessageGO;
+    [SerializeField] private GameObject playerTextMessageGO;
     [SerializeField] private GameObject optionButtonGO;
 
     [SerializeField] private Transform phonePanel;
@@ -51,6 +52,15 @@ public class ScenarioManager : MonoBehaviour
         //1 Create a "writing" animation sprite
         yield return new WaitForSeconds(3f); //delay time
         GameObject msg = Instantiate(textMessageGO, phonePanel);
+        textMessages.Add(msg);
+        msg.GetComponent<TextMessage>().Setup(message);
+    }
+
+    //---To write player text message (different Sprite?)
+    private void CreatePlayerTextMessage(string message)
+    {
+        //
+        GameObject msg = Instantiate(playerTextMessageGO, phonePanel);
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
 
@@ -85,15 +95,15 @@ public class ScenarioManager : MonoBehaviour
     private IEnumerator ResolveScenarioCoroutine(OptionSO optionChosen)
     {
         //3.1 affect attention meter
-        affectionMeter += optionChosen.affectionMeterChange;
-        //3.2 Produce reactionMessages
-        foreach (string message in optionChosen.reactionMessages)
+        if(optionChosen.affectionMeterChange != 0)
         {
-            yield return CreateTextMessageCoroutine(message); //waits between each message
+            AffectionManager.Instance.ChangeAffection(optionChosen.affectionMeterChange);
         }
-        yield return new WaitForSeconds(3f);
 
-        //3.3 clearing option buttons and removing text messages (change this)
+        //3.2 Create TextMessage of the player
+        CreatePlayerTextMessage(optionChosen.buttonText); //maybe have the actual message be different? (so can have like a drunk scenario?)
+
+        //3.3 clearing option buttons 
         foreach (GameObject button in optionButtons)
         {
             //empty it out and make inactive
@@ -101,6 +111,15 @@ public class ScenarioManager : MonoBehaviour
             button.GetComponent<Button>().onClick.RemoveAllListeners();
             button.SetActive(false);
         }
+
+        //3.4 Produce reactionMessages
+        foreach (string message in optionChosen.reactionMessages)
+        {
+            yield return CreateTextMessageCoroutine(message); //waits between each message
+        }
+        yield return new WaitForSeconds(3f);
+
+        //3.5 Clear Text messages (possibly remove this to have a scroll rect
         foreach (GameObject msg in textMessages)
         {
 
@@ -110,7 +129,7 @@ public class ScenarioManager : MonoBehaviour
         
         yield return new WaitForSeconds(5f); //delay between next textMessage (do we need since CTMC has a delay too)
 
-        //3.4 Load next Scenario
+        //3.6 Load next Scenario
         LoadScenarioCoroutine(FindScenarioWithId(optionChosen.nextScenarioID));
        
     }
