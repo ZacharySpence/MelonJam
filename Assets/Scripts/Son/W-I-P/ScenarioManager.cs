@@ -94,10 +94,14 @@ public class ScenarioManager : MonoBehaviour
     }
     private IEnumerator ResolveScenarioCoroutine(OptionSO optionChosen)
     {
-        //3.1 affect attention meter
-        if(optionChosen.affectionMeterChange != 0)
+        //3.1 affect emotional values
+        if(optionChosen.hotEVChange != 0)
         {
-            AffectionManager.Instance.ChangeAffection(optionChosen.affectionMeterChange);
+           EmotionValueManager.Instance.ChangeEmotionValues(optionChosen.hotEVChange,false);
+        }
+        if (optionChosen.happinessEVChange != 0)
+        {
+            EmotionValueManager.Instance.ChangeEmotionValues(optionChosen.happinessEVChange,true);
         }
 
         //3.2 Create TextMessage of the player
@@ -112,10 +116,33 @@ public class ScenarioManager : MonoBehaviour
             button.SetActive(false);
         }
 
-        //3.4 Produce reactionMessages
-        foreach (string message in optionChosen.reactionMessages)
+        //3.4 Produce reactionMessages 
+        foreach (ReactionSO message in optionChosen.reactionMessages)
         {
-            yield return CreateTextMessageCoroutine(message); //waits between each message
+            List<string> msgs = new List<string>();
+            //Find the correct reaction based off Happiness/Angriness
+            if(message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion)
+            {
+                if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Hot)
+                {
+                    msgs = message.hotTextMessages;
+
+                }
+                else if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Cold)
+                {
+                    msgs = message.coldTextMessages;
+                }
+                else
+                {
+                    msgs = message.neutralTextMessages;
+                }
+            }
+            foreach(string msg in msgs)
+            {
+                yield return CreateTextMessageCoroutine(msg); //waits between each message
+            }
+            break; //should only have one case in each option so no need to get 2 sets of messages!
+            
         }
         yield return new WaitForSeconds(3f);
 
