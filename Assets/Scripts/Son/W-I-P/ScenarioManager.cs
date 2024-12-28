@@ -68,6 +68,7 @@ public class ScenarioManager : MonoBehaviour
                 GameObject btn = optionButtons[index];
                 btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = option.buttonText;
                 btn.GetComponent<Button>().onClick.AddListener(() => ResolveScenario(option));
+                btn.GetComponent<Button>().onClick.AddListener(() => btn.GetComponent<AudioSource>().Play()); //add the play on click sound
                 btn.SetActive(true);
                 index++;
 
@@ -92,7 +93,7 @@ public class ScenarioManager : MonoBehaviour
         }
         yield return new WaitForSeconds(3f);
 
-        //3.3 text messages (change this)
+        //3.3 clearing option buttons and removing text messages (change this)
         foreach (GameObject button in optionButtons)
         {
             //empty it out and make inactive
