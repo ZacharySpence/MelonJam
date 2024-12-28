@@ -30,24 +30,26 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] public List<ScenarioSO> scenarioList = new List<ScenarioSO>();
     [SerializeField] public ScenarioSO currentScenario;
 
-    [SerializeField] private List<GameObject> optionButtons;
+    [SerializeField] private List<GameObject> optionButtons; //have max 4 options?
     [SerializeField] private List<GameObject> textMessages; 
 
     private void Start()
     {
         //0. Find the correct scenario
-        LoadScenario(FindScenarioWithId("S1"));
+        StartCoroutine(LoadScenarioCoroutine(FindScenarioWithId("S1")));
     }
 
     //1.Load the text message for the scenario
-    private void LoadScenario(ScenarioSO scenario)
+    private IEnumerator LoadScenarioCoroutine(ScenarioSO scenario)
     {
         currentScenario = scenario; //just to see current scenario
-        CreateTextMessage(scenario.messageToDisplay);
+        yield return StartCoroutine(CreateTextMessageCoroutine(scenario.messageToDisplay));
         CreateOptions(scenario.optionsList);
     }
-    private void CreateTextMessage(string message)
+    private IEnumerator CreateTextMessageCoroutine(string message)
     {
+        //1 Create a "writing" animation sprite
+        yield return new WaitForSeconds(3f); //delay time
         GameObject msg = Instantiate(textMessageGO, phonePanel);
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
@@ -56,15 +58,18 @@ public class ScenarioManager : MonoBehaviour
     //2. create the options for the scenario
     private void CreateOptions(List<OptionSO> options)
     {
+        int index = 0;
         foreach(OptionSO option in options)
         {
             if (option.isActive)
             {
-                GameObject btn = Instantiate(optionButtonGO, optionPanel);
+
                 //Create a listener for the button here to ResolveScenario given the option clicked + replace text
-                optionButtons.Add(btn);
+                GameObject btn = optionButtons[index];
                 btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = option.buttonText;
                 btn.GetComponent<Button>().onClick.AddListener(() => ResolveScenario(option));
+                btn.SetActive(true);
+                index++;
 
             }
            
@@ -74,29 +79,39 @@ public class ScenarioManager : MonoBehaviour
     //3. Resolve scenario once button clicked -> add delays/make into a coroutine
     private void ResolveScenario(OptionSO optionChosen)
     {
+        StartCoroutine(ResolveScenarioCoroutine(optionChosen));
+    }
+    private IEnumerator ResolveScenarioCoroutine(OptionSO optionChosen)
+    {
         //3.1 affect attention meter
         affectionMeter += optionChosen.affectionMeterChange;
         //3.2 Produce reactionMessages
-        foreach(string message in optionChosen.reactionMessages)
+        foreach (string message in optionChosen.reactionMessages)
         {
-            CreateTextMessage(message);
+            yield return CreateTextMessageCoroutine(message); //waits between each message
         }
-        //3.3 Clean buttons/text messages (change this)
-        foreach(GameObject button in optionButtons)
+        yield return new WaitForSeconds(3f);
+
+        //3.3 text messages (change this)
+        foreach (GameObject button in optionButtons)
         {
-            
-            Destroy(button);
+            //empty it out and make inactive
+            button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
+            button.GetComponent<Button>().onClick.RemoveAllListeners();
+            button.SetActive(false);
         }
-        foreach(GameObject msg in textMessages)
+        foreach (GameObject msg in textMessages)
         {
-            
+
             Destroy(msg);
         }
-        optionButtons.Clear();
         textMessages.Clear();
+        
+        yield return new WaitForSeconds(5f); //delay between next textMessage (do we need since CTMC has a delay too)
 
         //3.4 Load next Scenario
-        LoadScenario(FindScenarioWithId(optionChosen.nextScenarioID));
+        LoadScenarioCoroutine(FindScenarioWithId(optionChosen.nextScenarioID));
+       
     }
 
 
