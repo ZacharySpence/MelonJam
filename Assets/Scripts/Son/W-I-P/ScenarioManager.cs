@@ -101,7 +101,7 @@ public class ScenarioManager : MonoBehaviour
         }
 
         //3.2 Create TextMessage of the player
-        CreatePlayerTextMessage(optionChosen.buttonText); //maybe have the actual message be different? (so can have like a drunk scenario?)
+        CreatePlayerTextMessage(optionChosen.actualText); //maybe have the actual message be different? (so can have like a drunk scenario?)
 
         //3.3 clearing option buttons 
         foreach (GameObject button in optionButtons)
