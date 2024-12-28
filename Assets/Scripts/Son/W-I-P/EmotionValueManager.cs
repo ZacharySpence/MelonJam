@@ -41,8 +41,8 @@ public class EmotionValueManager : MonoBehaviour
 
     void ChangeEmotion()
     {
-        currentHCEmotion = hotEV == 0? HCEmotion.Neutral : hotEV > 0 ? HCEmotion.Hot : HCEmotion.Cold;
-        currentAHEmotion = happinessEV == 0 ? AHEmotion.Neutral : happinessEV > 0 ? AHEmotion.Happy : AHEmotion.Angry;
+        currentHCEmotion =  hotEV > 0 ? HCEmotion.Hot : HCEmotion.Cold;
+        currentAHEmotion =  happinessEV > 0 ? AHEmotion.Happy : AHEmotion.Angry;
 
     }
     void ChangeEmotionName()
@@ -57,14 +57,12 @@ public class EmotionValueManager : MonoBehaviour
 
 public enum AHEmotion
 {
-    Neutral,
     Angry,
     Happy
 
 }
 public enum HCEmotion
 {
-    Neutral,
     Hot,
     Cold
 }
