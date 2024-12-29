@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
+  m_Name: S-1.2
+  m_EditorClassIdentifier: 
+  buttonText: Robot
+  actualText:
+  - Ah yes I do forget sorry
+  - Let me just program mself to respond better
+  - '*Beep Boop* I A.M T.H.E. I.M.P.R.O.V.E.D O.N.E'
+  - I C.A.N M.E.S.S.A.G.E I.N.S.T.A.N.T.L.Y
+  isActive: 1
+  reactionMessages:
+  - {fileID: 11400000, guid: a0d84fb5a8e35514d902b02f7ca90247, type: 2}
+  - {fileID: 11400000, guid: a87c46132d7ac8a4cb03f7aca9dca7a2, type: 2}
+  happinessEVChange: 0
+  hotEVChange: 1

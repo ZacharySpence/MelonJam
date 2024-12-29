@@ -9,4 +9,5 @@ public class ReactionSO: ScriptableObject
     public List<string> coldTextMessages;
     public List<string> hotTextMessages;
     public List<string> neutralTextMessages;
+    public string nextScenarioID; //whichever scenario this leads to next
 }

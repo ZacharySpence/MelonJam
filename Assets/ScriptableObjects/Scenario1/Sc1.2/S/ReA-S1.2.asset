@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
+  m_Name: ReA-S1.2
+  m_EditorClassIdentifier: 
+  emotionNeeded: 0
+  coldTextMessages:
+  - Well improved from useless
+  - Is still useless
+  hotTextMessages:
+  - 'I don''t want a robot '
+  - 'You already text like one jfc '
+  neutralTextMessages:
+  - BUG
+  nextScenarioID: Sc1.4

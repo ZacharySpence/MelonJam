@@ -32,12 +32,16 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] public ScenarioSO currentScenario;
 
     [SerializeField] private List<GameObject> optionButtons; //have max 4 options?
-    [SerializeField] private List<GameObject> textMessages; 
+    [SerializeField] private List<GameObject> textMessages;
+
+    [Header("Debugging")]
+    [SerializeField] float delayBetweenMessages = 1f;
+    [SerializeField] float delayToNextScenario = 5f;
 
     private void Start()
     {
         //0. Find the correct scenario
-        StartCoroutine(LoadScenarioCoroutine(FindScenarioWithId("S1")));
+        StartCoroutine(LoadScenarioCoroutine(FindScenarioWithId("Sc1.0")));
     }
 
     //1.Load the text message for the scenario
@@ -50,17 +54,19 @@ public class ScenarioManager : MonoBehaviour
     private IEnumerator CreateTextMessageCoroutine(string message)
     {
         //1 Create a "writing" animation sprite
-        yield return new WaitForSeconds(3f); //delay time
+        yield return new WaitForSeconds(delayBetweenMessages); //delay time
         GameObject msg = Instantiate(textMessageGO, phonePanel);
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
     }
 
     //---To write player text message (different Sprite?)
-    private void CreatePlayerTextMessage(string message)
+    private IEnumerator CreatePlayerTextMessage(string message)
     {
         //
+        yield return new WaitForSeconds(delayBetweenMessages);
         GameObject msg = Instantiate(playerTextMessageGO, phonePanel);
+        
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
 
@@ -90,10 +96,15 @@ public class ScenarioManager : MonoBehaviour
     //3. Resolve scenario once button clicked -> add delays/make into a coroutine
     private void ResolveScenario(OptionSO optionChosen)
     {
+        foreach(GameObject btn in optionButtons)
+        {
+            btn.GetComponent<Button>().onClick.RemoveAllListeners(); //Remove listeners!
+        }
         StartCoroutine(ResolveScenarioCoroutine(optionChosen));
     }
     private IEnumerator ResolveScenarioCoroutine(OptionSO optionChosen)
     {
+        Debug.Log("3.1 Affecting Emotional Values");
         //3.1 affect emotional values
         if(optionChosen.hotEVChange != 0)
         {
@@ -104,25 +115,34 @@ public class ScenarioManager : MonoBehaviour
             EmotionValueManager.Instance.ChangeEmotionValues(optionChosen.happinessEVChange,true);
         }
 
+        Debug.Log("3.2 Creating player text messages");
         //3.2 Create TextMessage of the player
-        CreatePlayerTextMessage(optionChosen.buttonText); //maybe have the actual message be different? (so can have like a drunk scenario?)
+        foreach(string msg in optionChosen.actualText)
+        {
+            yield return CreatePlayerTextMessage(msg); //maybe have the actual message be different? (so can have like a drunk scenario?)
+        }
 
+        Debug.Log("3.3 Clearing out buttons");
         //3.3 clearing option buttons 
         foreach (GameObject button in optionButtons)
         {
             //empty it out and make inactive
             button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
-            button.GetComponent<Button>().onClick.RemoveAllListeners();
+            
             button.SetActive(false);
         }
 
+        ReactionSO chosenReaction = null;
+
+        Debug.Log("3.4 Choosing reaction message");
         //3.4 Produce reactionMessages 
         foreach (ReactionSO message in optionChosen.reactionMessages)
         {
             List<string> msgs = new List<string>();
             //Find the correct reaction based off Happiness/Angriness
-            if(message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion)
+            if(message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion || message.emotionNeeded == AHEmotion.Any)
             {
+                chosenReaction = message;
                 if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Hot)
                 {
                     msgs = message.hotTextMessages;
@@ -146,6 +166,7 @@ public class ScenarioManager : MonoBehaviour
         }
         yield return new WaitForSeconds(3f);
 
+        Debug.Log("3.5 Clearing Text Messages");
         //3.5 Clear Text messages (possibly remove this to have a scroll rect
         foreach (GameObject msg in textMessages)
         {
@@ -154,10 +175,10 @@ public class ScenarioManager : MonoBehaviour
         }
         textMessages.Clear();
         
-        yield return new WaitForSeconds(5f); //delay between next textMessage (do we need since CTMC has a delay too)
-
+        yield return new WaitForSeconds(delayToNextScenario); //delay between next textMessage (do we need since CTMC has a delay too)
+        Debug.Log("3.6 Load next Scenario");
         //3.6 Load next Scenario
-        LoadScenarioCoroutine(FindScenarioWithId(optionChosen.nextScenarioID));
+        yield return LoadScenarioCoroutine(FindScenarioWithId(chosenReaction.nextScenarioID));
        
     }
 

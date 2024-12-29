@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dacd91cda009638489ed9e8a89ab0c65, type: 3}
-  m_Name: Scenario1
+  m_Name: Sc1.5
   m_EditorClassIdentifier: 
-  ID: S1
-  messageToDisplay: Would you still love me if I was a worm?
+  ID: Sc1.5
+  messageToDisplay: There was a package on my doorstep this morning. ooh is that
+    the new Bloomburrow draft set! Did you send it!?
   optionsList:
-  - {fileID: 11400000, guid: 13a055143dc041d4b90db902b8b6a747, type: 2}
-  - {fileID: 11400000, guid: e00ae2649f371554d83a51056ce03cf0, type: 2}
-  - {fileID: 11400000, guid: 5834df0766669fe4e99db9a1aa4bdd44, type: 2}
+  - {fileID: 11400000, guid: fd4f7ca38ae941b489f90d9f6c63145d, type: 2}
+  - {fileID: 11400000, guid: 044385bab3d76f14797c39e1d66f774d, type: 2}
+  - {fileID: 11400000, guid: 5d9437df44e24d14e85fd2e57405a1ca, type: 2}

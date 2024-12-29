@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
+  m_Name: ReA-L1.2
+  m_EditorClassIdentifier: 
+  emotionNeeded: 0
+  coldTextMessages:
+  - Fine
+  - ttyl
+  hotTextMessages:
+  - Yeah no wonder you can't text
+  - glued to your phone and all
+  - how hard is it to bloody text me once in a while
+  - You see my god damn messages and leave them on read all the time
+  - Like c'mon we're dating, get your shit together
+  neutralTextMessages: []
+  nextScenarioID: Sc1.4
