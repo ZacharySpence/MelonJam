@@ -15,5 +15,5 @@ MonoBehaviour:
   ID: Sc1.1
   messageToDisplay: Can we talk right now?
   optionsList:
-  - {fileID: 11400000, guid: 13a055143dc041d4b90db902b8b6a747, type: 2}
+  - {fileID: 11400000, guid: 93b45a0905746794fb318088d37074cb, type: 2}
   - {fileID: 11400000, guid: eeb5ecbb2c630f243afbaa2e12695c7b, type: 2}

@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f50dd4659bd53489ff32df176bc43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMessageGO: {fileID: 8977561885231383523, guid: 88bebca4ba50ac84ea3df5819eaa1a51, type: 3}
-  playerTextMessageGO: {fileID: 8977561885231383523, guid: abb52576bd7ab6546880138dbe7bdf2e, type: 3}
+  textMessageGO: {fileID: 7315787901959333724, guid: be0d649bc2a40af46ae05d77769c2229, type: 3}
+  playerTextMessageGO: {fileID: 3949112417670526650, guid: 52104fbbe0228ba4fab1cb53733d3534, type: 3}
   optionButtonGO: {fileID: 82723447361005321, guid: fe913f7c5a14297449b771b2fecffac5, type: 3}
   phonePanel: {fileID: 454421871}
   optionPanel: {fileID: 188922112}
@@ -721,8 +721,8 @@ MonoBehaviour:
   - {fileID: 308464665}
   - {fileID: 1062097755}
   textMessages: []
-  delayBetweenMessages: 1
-  delayToNextScenario: 5
+  delayBetweenMessages: 0.2
+  delayToNextScenario: 2
 --- !u!1 &386059720
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class ScenarioManager : MonoBehaviour
     [Header("Debugging")]
     [SerializeField] float delayBetweenMessages = 1f;
     [SerializeField] float delayToNextScenario = 5f;
-
+    [SerializeField] ReactionSO chosenReaction = null;
     private void Start()
     {
         //0. Find the correct scenario
@@ -133,7 +133,7 @@ public class ScenarioManager : MonoBehaviour
             button.SetActive(false);
         }
 
-        ReactionSO chosenReaction = null;
+      
 
         Debug.Log("3.4 Choosing reaction message");
         //3.4 Produce reactionMessages 
@@ -144,6 +144,7 @@ public class ScenarioManager : MonoBehaviour
             if(message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion || message.emotionNeeded == AHEmotion.Any)
             {
                 chosenReaction = message;
+                Debug.Log("Chosen Reaction Changed to:" + chosenReaction.name);
                 if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Hot)
                 {
                     msgs = message.hotTextMessages;
@@ -157,22 +158,32 @@ public class ScenarioManager : MonoBehaviour
                 {
                     msgs = message.neutralTextMessages;
                 }
+
+                foreach (string msg in msgs)
+                {
+                    yield return CreateTextMessageCoroutine(msg); //waits between each message
+                }
+                break; //should only have one case in each option so no need to get 2 sets of messages!
             }
-            foreach(string msg in msgs)
-            {
-                yield return CreateTextMessageCoroutine(msg); //waits between each message
-            }
-            break; //should only have one case in each option so no need to get 2 sets of messages!
+            
+           
             
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         Debug.Log("3.5 Clearing Text Messages");
         //3.5 Clear Text messages (possibly remove this to have a scroll rect
-        
+        foreach(GameObject text in textMessages)
+        {
+            Destroy(text);
+            
+        }
+        textMessages.Clear();
         yield return new WaitForSeconds(delayToNextScenario); //delay between next textMessage (do we need since CTMC has a delay too)
         Debug.Log("3.6 Load next Scenario");
         //3.6 Load next Scenario
+        Debug.Log(chosenReaction.name);
+        Debug.Log(optionChosen.name);
         yield return LoadScenarioCoroutine(FindScenarioWithId(chosenReaction.nextScenarioID));
        
     }
@@ -181,9 +192,11 @@ public class ScenarioManager : MonoBehaviour
     //Finding scenario via ID
     public ScenarioSO FindScenarioWithId(string id)
     {
+       
        foreach(ScenarioSO scenario in scenarioList)
         {
-            if(scenario.ID == id)
+            Debug.Log(id+":"+scenario.ID);
+            if (scenario.ID == id)
             {
                 return scenario;
             }
