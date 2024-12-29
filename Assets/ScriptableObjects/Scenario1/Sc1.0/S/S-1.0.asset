@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
-  m_Name: WrongOptionS1
+  m_Name: S-1.0
   m_EditorClassIdentifier: 
-  choiceNumber: 1
-  buttonText: No, never
+  buttonText: Music
+  actualText:
+  - oh you know...
+  - just with my friend  Tommy
+  - playing the rusty trombone
   isActive: 1
-  nextScenarioID: S2
   reactionMessages:
-  - You don't love me?
-  affectionMeterChange: -5
+  - {fileID: 11400000, guid: feecdbd067a1b6d42b1cca88ec2222a1, type: 2}
+  happinessEVChange: 0
+  hotEVChange: 1

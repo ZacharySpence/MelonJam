@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacd91cda009638489ed9e8a89ab0c65, type: 3}
+  m_Name: Sc1.3
+  m_EditorClassIdentifier: 
+  ID: Sc1.3
+  messageToDisplay: So you have time for other stuff but not me? you partner?
+  optionsList:
+  - {fileID: 11400000, guid: 1e22f08d3fc271f4d90ef31a54771308, type: 2}
+  - {fileID: 11400000, guid: 9795cc3daf2363c488cda575c7142940, type: 2}
+  - {fileID: 11400000, guid: 2b89bb25e568a7f49adaa09ed2e87d4b, type: 2}

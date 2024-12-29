@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacd91cda009638489ed9e8a89ab0c65, type: 3}
+  m_Name: Sc1.8
+  m_EditorClassIdentifier: 
+  ID: Sc1.7
+  messageToDisplay: STOP. LEAVING. ME. ON. READ
+  optionsList:
+  - {fileID: 11400000, guid: 39b3c05fa96c68a4f816030763aac4b3, type: 2}
+  - {fileID: 11400000, guid: ad77f514ba4e59f498d2b47ec43cdb46, type: 2}

@@ -566,13 +566,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMessageGO: {fileID: 8977561885231383523, guid: 88bebca4ba50ac84ea3df5819eaa1a51, type: 3}
-  playerTextMessageGO: {fileID: 0}
+  playerTextMessageGO: {fileID: 8977561885231383523, guid: abb52576bd7ab6546880138dbe7bdf2e, type: 3}
   optionButtonGO: {fileID: 82723447361005321, guid: fe913f7c5a14297449b771b2fecffac5, type: 3}
   phonePanel: {fileID: 454421871}
   optionPanel: {fileID: 188922112}
   scenarioList:
   - {fileID: 11400000, guid: 5c12184627260bc429f8d3a586c9fcff, type: 2}
-  - {fileID: 11400000, guid: 7f424beec2b502846af5cf4c95754dd3, type: 2}
+  - {fileID: 11400000, guid: 8a2c586374f633641abe52e5a577811c, type: 2}
+  - {fileID: 11400000, guid: 841240c10989a6b4bb5168fa8b2411f7, type: 2}
+  - {fileID: 11400000, guid: 27ef2722398a8624380cea8047702bbc, type: 2}
+  - {fileID: 11400000, guid: 81098ed3b687af947a0b055da4154cf1, type: 2}
+  - {fileID: 11400000, guid: 7ecdc4ad7a33eb640811204301382799, type: 2}
+  - {fileID: 11400000, guid: 84a8fd244664b4b4eb603166bb6a2922, type: 2}
+  - {fileID: 11400000, guid: 61eedf7917be6154e8bc30a89800bd7f, type: 2}
+  - {fileID: 11400000, guid: 55982d91cef91914f94839fe814a743c, type: 2}
+  - {fileID: 11400000, guid: 6530c22824c887e46872e3896a52ffe9, type: 2}
   currentScenario: {fileID: 0}
   optionButtons:
   - {fileID: 550562849}
@@ -1200,7 +1208,7 @@ GameObject:
   - component: {fileID: 1821584092}
   - component: {fileID: 1821584091}
   m_Layer: 5
-  m_Name: AffectionMeterSprite
+  m_Name: EmotionValueSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,11 +1245,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6a2d0b65bbcb040bbebe87c2261a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  affectionMeter: 0
-  affectionSprite: {fileID: 1821584092}
+  happinessEV: 0
+  hotEV: 0
+  emotionSprite: {fileID: 1821584092}
   happySprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   neutralSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   angrySprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  hotSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  coldSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  currentAHEmotion: 0
+  currentHCEmotion: 0
 --- !u!114 &1821584092
 MonoBehaviour:
   m_ObjectHideFlags: 0

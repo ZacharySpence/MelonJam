@@ -6,13 +6,15 @@ using UnityEngine;
 public class OptionSO : ScriptableObject
 {
     public string buttonText;
-    public string actualText;
+    public List<string> actualText;
     public bool isActive; //whether to create this option at all
-    public string nextScenarioID; //whichever scenario this leads to next
+  
     public List<ReactionSO> reactionMessages; //so all the messages that pop up after choosing this option
 
     public int happinessEVChange;
     public int hotEVChange;
+    public List<string> test1;
+    public string test2;
     //Stats like:
         //Attention meter
    
