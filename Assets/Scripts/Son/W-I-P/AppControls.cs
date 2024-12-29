@@ -10,10 +10,11 @@ public class AppControls : MonoBehaviour
     [SerializeField] TextMeshProUGUI startResumeGameButtonText;
     public void StartGame()
     {
-        MainMenuScreen.SetActive(false);
         MessageScreen.SetActive(true);
+        HomeScreen.SetActive(false);
+        
         isGameStarted = true;
-        startResumeGameButtonText.text = "Resume Game";
+        
     }
 
     public void ExitGame()
