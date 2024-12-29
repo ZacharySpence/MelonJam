@@ -55,7 +55,7 @@ public class ScenarioManager : MonoBehaviour
     {
         //1 Create a "writing" animation sprite
         yield return new WaitForSeconds(delayBetweenMessages); //delay time
-        GameObject msg = Instantiate(textMessageGO, phonePanel);
+        GameObject msg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
     }
@@ -65,7 +65,7 @@ public class ScenarioManager : MonoBehaviour
     {
         //
         yield return new WaitForSeconds(delayBetweenMessages);
-        GameObject msg = Instantiate(playerTextMessageGO, phonePanel);
+        GameObject msg = Instantiate(playerTextMessageGO, phonePanel).transform.GetChild(0).gameObject;
         
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
@@ -169,12 +169,6 @@ public class ScenarioManager : MonoBehaviour
 
         Debug.Log("3.5 Clearing Text Messages");
         //3.5 Clear Text messages (possibly remove this to have a scroll rect
-        foreach (GameObject msg in textMessages)
-        {
-
-            Destroy(msg);
-        }
-        textMessages.Clear();
         
         yield return new WaitForSeconds(delayToNextScenario); //delay between next textMessage (do we need since CTMC has a delay too)
         Debug.Log("3.6 Load next Scenario");
