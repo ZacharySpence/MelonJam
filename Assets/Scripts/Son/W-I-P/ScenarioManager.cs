@@ -35,6 +35,8 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private List<GameObject> textMessages;
     [SerializeField] private string nextScenarioID;
     [SerializeField] private List<OptionSO> allActiveOptions;
+
+    [SerializeField] private ScrollRect scrollRect;
     [Header("Time")]
     [SerializeField] float timeTillIgnoreElapsed = 0f;
     [SerializeField] float timeTillIgnoreTriggered = 20f;
@@ -48,6 +50,10 @@ public class ScenarioManager : MonoBehaviour
     {
         //0. Find the correct scenario
         StartCoroutine(LoadScenarioCoroutine(FindScenarioWithId("Sc1.0")));
+    }
+    private void Update()
+    {
+        scrollRect.verticalNormalizedPosition = 0f; //keep scroll rect at bottom;
     }
 
     //0.5 Start timetill ignore
@@ -70,6 +76,7 @@ public class ScenarioManager : MonoBehaviour
     }
     private IEnumerator CreateTextMessageCoroutine(List<string> message)
     {
+        
         //1 Create a "writing" animation sprite
         yield return new WaitForSeconds(delayBetweenMessages); //delay time
         foreach(string msg in message)
@@ -77,6 +84,7 @@ public class ScenarioManager : MonoBehaviour
             GameObject textMsg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
             textMessages.Add(textMsg);
             textMsg.GetComponent<TextMessage>().Setup(msg);
+           
         }
      
     }
@@ -90,6 +98,7 @@ public class ScenarioManager : MonoBehaviour
         
         textMessages.Add(msg);
         msg.GetComponent<TextMessage>().Setup(message);
+        
 
     }
     //2. create the options for the scenario
@@ -208,6 +217,7 @@ public class ScenarioManager : MonoBehaviour
                 break; //should only have one case in each option so no need to get 2 sets of messages!           
         }
         yield return new WaitForSeconds(1f);
+
 
         yield return new WaitForSeconds(delayToNextScenario); //delay between next textMessage (do we need since CTMC has a delay too)
         Debug.Log("3.6 Load next Scenario");
