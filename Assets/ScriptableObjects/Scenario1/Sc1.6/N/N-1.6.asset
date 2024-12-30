@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-1.6
   m_EditorClassIdentifier: 
-  buttonText: Teddy
+  buttonText: I sent you an iphone
   actualText:
-  - A Teddy
-  - So you don't feel the need to hold onto something else while we're apart
+  - I sent you an Iphone
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: ee81e15822ee83341ab891844d916dc9, type: 2}
-  happinessEVChange: -2
-  hotEVChange: 0
+  happinessEVChange: 0
+  hotEVChange: -1
+  test1: []
+  test2: 

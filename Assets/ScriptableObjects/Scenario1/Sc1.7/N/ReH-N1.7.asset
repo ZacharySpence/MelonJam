@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
   m_Name: ReH-N1.7
   m_EditorClassIdentifier: 
-  emotionNeeded: 2
+  emotionNeeded: 3
   coldTextMessages:
-  - 'Oh? well enjoy '
+  - OMG YOU THIS WAS YOU??
+  - 'Thank you babe '
   hotTextMessages:
-  - Oh? well make sure to send me pictures
+  - OMG YOU THIS WAS YOU??
+  - 'Thank you babe '
   neutralTextMessages:
   - Oh? well enjoy
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

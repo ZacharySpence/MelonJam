@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N1.4
   m_EditorClassIdentifier: 
-  buttonText: You?
+  buttonText: Ya, did it arrive
   actualText:
-  - Have you dont anything to deserve a present this week?
+  - Ya
+  - Did it already arrive ?
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 19b576e5fc061e54d9ddd7985661d971, type: 2}
   happinessEVChange: 0
   hotEVChange: 1
+  test1: []
+  test2: 

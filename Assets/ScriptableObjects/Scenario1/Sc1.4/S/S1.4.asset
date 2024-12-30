@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: S1.4
   m_EditorClassIdentifier: 
-  buttonText: For you
+  buttonText: idk, forgot
   actualText:
-  - Oh idk...maybe
-  - but I've certainly got a package for you that can't be sent in the mail
+  - idk
+  - i dont remember
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: bb83b134bf3bd4c43bb75d4af5a372a9, type: 2}
   happinessEVChange: 0
   hotEVChange: 0
+  test1: []
+  test2: 

@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - Ok fair
-  - But you could've said goodnight so I knew
+  - "Wow it\u2019s like you don\u2019t even care."
+  - Whatever.
   hotTextMessages:
-  - Like you couldn't even spare a minute to text me goodnight
+  - WOW
+  - "Can\u2019t even spare a minute to text me????"
   neutralTextMessages:
   - Ok fair
   - But you could've said goodnight so I knew
   nextScenarioID: Sc2
+  nextHotScenarioID: 
+  nextColdScenarioID: 

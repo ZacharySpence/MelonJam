@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 1
   coldTextMessages:
-  - This is the FIFTH time this week
-  - Get it fixed or that phone wont be the only thing broken
+  - THIS IS THE FIFTH TIME THIS HAPPENED THIS WEEK
+  - GET IT FIXED OR GET A NEW PHONE IDIOT
   hotTextMessages:
-  - This is the FIFTH time this week
-  - Get it fixed or that phone wont be the only thing broken
+  - THIS IS THE FIFTH TIME THIS HAPPENED THIS WEEK
+  - GET IT FIXED OR GET A NEW PHONE IDIOT
   neutralTextMessages:
   - This is the FIFTH time this week
   - Get it fixed or that phone wont be the only thing broken
   nextScenarioID: Sc2
+  nextHotScenarioID: 
+  nextColdScenarioID: 

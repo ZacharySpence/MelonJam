@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: Phone
   actualText:
-  - I sent you a new phone
-  - Since you asked for one
+  - just a teddy bear
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: ebd22980e17fa8c40a77556ce26eed43, type: 2}
   happinessEVChange: 0
-  hotEVChange: -1
+  hotEVChange: 0
+  test1: []
+  test2: 

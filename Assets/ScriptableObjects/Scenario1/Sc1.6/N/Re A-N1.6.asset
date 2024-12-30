@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
-  m_Name: Re-Ho1.7
+  m_Name: Re A-N1.6
   m_EditorClassIdentifier: 
-  emotionNeeded: 3
+  emotionNeeded: 1
   coldTextMessages:
-  - Well you sound excited about that
+  - But I already have a phone.
+  - "What a pointless gift. You could\u2019ve given me something more practical"
   hotTextMessages:
-  - Well lucky me
+  - But I already have a phone.
+  - "What a pointless gift. You could\u2019ve given me something more practical"
   neutralTextMessages:
-  - Well you sound excited about that
+  - What do you mean by that?
+  - Are you being an ass right now?
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

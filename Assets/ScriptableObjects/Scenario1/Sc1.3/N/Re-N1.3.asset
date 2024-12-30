@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - K
+  - "So you don\u2019t want to spend time with me anymore??"
   hotTextMessages:
-  - K
+  - "So you don\u2019t want to spend time with me anymore??"
   neutralTextMessages:
-  - K
+  - "So you don\u2019t want to spend time with me anymore??"
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

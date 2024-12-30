@@ -14,12 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - Hmm maybe
-  - I'll go ask him shall I?
+  - K
+  - "Of course you don\u2019t care at all."
+  - 'Why do i even bother : /'
   hotTextMessages:
-  - Hmm maybe
-  - I'll go ask him shall I?
+  - ??
+  - "You don\u2019t care who gave this to me??"
+  - "Are you serious?? You won\u2019t even put an effort into giving me a better
+    gift???"
   neutralTextMessages:
   - Hmm maybe
   - I'll go ask him shall I?
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

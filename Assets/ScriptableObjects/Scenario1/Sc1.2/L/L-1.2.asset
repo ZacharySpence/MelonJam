@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: L-1.2
   m_EditorClassIdentifier: 
-  buttonText: Constant
+  buttonText: I msg you all the time
   actualText:
-  - I'm glued to my phone
-  - we're literally symbiotic at this point
+  - 'i message you all the time though '
+  - i literally just messaged you yesterday
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 4434d5bbde044034eac0901a3062d5e6, type: 2}
   - {fileID: 11400000, guid: 5f4e96eca94d23d4eb642f2887bfa2a7, type: 2}
-  happinessEVChange: -1
+  happinessEVChange: 0
   hotEVChange: 1
+  test1: []
+  test2: 

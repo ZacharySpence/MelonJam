@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-1.8
   m_EditorClassIdentifier: 
-  buttonText: Asleep
+  buttonText: I had work
   actualText:
-  - Uh Duh it's called being asleep
-  - If you've forgotten we're halfway across the world
+  - i was in work
+  - i couldnt reply, was too busy
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 36485fbfe8ca5bc449e8f1ef9a707d44, type: 2}
   happinessEVChange: -1
   hotEVChange: 0
+  test1: []
+  test2: 

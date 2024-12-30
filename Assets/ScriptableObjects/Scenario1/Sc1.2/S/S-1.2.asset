@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: S-1.2
   m_EditorClassIdentifier: 
-  buttonText: Robot
+  buttonText: I'm sorry
   actualText:
-  - Ah yes I do forget sorry
-  - Let me just program mself to respond better
-  - '*Beep Boop* I A.M T.H.E. I.M.P.R.O.V.E.D O.N.E'
-  - I C.A.N M.E.S.S.A.G.E I.N.S.T.A.N.T.L.Y
+  - "ok, I\u2019m sorry "
+  - "i\u2019ll message you more from now on"
+  - "love you \u2665"
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: a0d84fb5a8e35514d902b02f7ca90247, type: 2}
   - {fileID: 11400000, guid: a87c46132d7ac8a4cb03f7aca9dca7a2, type: 2}
-  happinessEVChange: 0
+  happinessEVChange: 2
   hotEVChange: 1
+  test1: []
+  test2: 

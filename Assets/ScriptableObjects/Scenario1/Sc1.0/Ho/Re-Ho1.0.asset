@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Re-Ho1.0
   m_EditorClassIdentifier: 
   emotionNeeded: 3
-  coldTextMessages: []
+  coldTextMessages:
+  - Oh.
+  - Well I hope you're having a nice time without me :)
   hotTextMessages: []
   neutralTextMessages:
   - Oh.
-  - Well I hope you're having a nice tie without me :D
+  - Well I hope you're having a nice time without me :)
   nextScenarioID: Sc1.1
+  nextHotScenarioID: 
+  nextColdScenarioID: 

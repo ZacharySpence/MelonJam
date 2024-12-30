@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-1.2
   m_EditorClassIdentifier: 
-  buttonText: Busy
+  buttonText: i'm busy
   actualText:
-  - Busy
+  - i'm busy
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 4dbef0e47b7be634b864478b1109df1a, type: 2}
   happinessEVChange: 0
   hotEVChange: -1
+  test1: []
+  test2: 

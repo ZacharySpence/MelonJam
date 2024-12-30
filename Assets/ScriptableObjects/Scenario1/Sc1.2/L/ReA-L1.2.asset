@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 1
   coldTextMessages:
-  - Fine
-  - ttyl
+  - "No you didn\u2019t???"
+  - Stop lying to me you jerk
   hotTextMessages:
-  - Yeah no wonder you can't text
-  - glued to your phone and all
-  - how hard is it to bloody text me once in a while
-  - You see my god damn messages and leave them on read all the time
-  - Like c'mon we're dating, get your shit together
+  - ARE YOU SERIOUS???
+  - "I\u2019VE LITERALLY BEEN TEXTING YOU EVERYDAY AND ALL YOU DO IS LEAVE ME ON
+    READ"
+  - "I JUST WANT A REPLY AND YOU CAN\u2019T EVEN DO THAT YOU TROGLODYTE"
   neutralTextMessages: []
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

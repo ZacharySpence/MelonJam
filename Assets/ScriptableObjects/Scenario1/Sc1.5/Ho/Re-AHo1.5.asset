@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
-  m_Name: Re-N1.6
+  m_Name: Re-AHo1.5
   m_EditorClassIdentifier: 
-  emotionNeeded: 3
+  emotionNeeded: 1
   coldTextMessages:
-  - What do you mean by that?
-  - Are you being an ass right now?
+  - 'Oh wow so now you suddenly care?? '
   hotTextMessages:
-  - Well the teddy's only big enough for one arm
-  - Guess i'll need to find someone to hold in the other huh
-  - huh!
-  neutralTextMessages:
-  - What do you mean by that?
-  - Are you being an ass right now?
+  - NO???
+  - 'Why would you even say that '
+  - I would never cheat on you
+  neutralTextMessages: []
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

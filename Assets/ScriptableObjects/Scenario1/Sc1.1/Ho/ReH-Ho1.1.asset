@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 2
   coldTextMessages:
-  - Why haven't you been messaging me lately
+  - "Why haven\u2019t you been messaging me lately?"
   hotTextMessages:
   - 'You barely message me anymore :( '
   - Something up?
   neutralTextMessages:
   - BUG
   nextScenarioID: Sc1.2.1
+  nextHotScenarioID: Sc1.2.1
+  nextColdScenarioID: Sc1.2.2

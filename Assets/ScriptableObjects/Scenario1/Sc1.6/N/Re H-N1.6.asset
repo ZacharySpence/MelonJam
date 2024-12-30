@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
-  m_Name: ReH-N1.5
+  m_Name: Re H-N1.6
   m_EditorClassIdentifier: 
   emotionNeeded: 2
   coldTextMessages:
-  - Alright thats a great idea
-  - maybe all night long
+  - "Aww that\u2019s so nice of you babe"
   hotTextMessages:
-  - Alright thats a great idea
-  - maybe all night long
+  - "Aww that\u2019s so nice of you babe"
   neutralTextMessages:
-  - Alright thats a great idea
-  - maybe all night long
+  - What do you mean by that?
+  - Are you being an ass right now?
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

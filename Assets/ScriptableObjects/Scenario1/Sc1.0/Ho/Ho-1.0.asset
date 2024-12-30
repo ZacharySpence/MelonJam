@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-1.0
   m_EditorClassIdentifier: 
-  buttonText: Dancing
+  buttonText: Just dancing
   actualText:
   - Just the usual, went out dancing
-  - friday night funk
+  - friday night shenanigans
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: af79e596c34d49949a962fb86454f3cd, type: 2}
-  happinessEVChange: 1
+  happinessEVChange: -1
   hotEVChange: 0
+  test1: []
+  test2: 

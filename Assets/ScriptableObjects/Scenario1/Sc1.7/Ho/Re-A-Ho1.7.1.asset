@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
-  m_Name: Re-Ho1.5
+  m_Name: Re-A-Ho1.7.1
   m_EditorClassIdentifier: 
-  emotionNeeded: 3
+  emotionNeeded: 1
   coldTextMessages:
-  - Thx
-  - I'll just wait for you to come over then
-  - 6 months?
+  - How do you even forget something like this?? You literally sent me an IPHONE
   hotTextMessages:
-  - Oh I love it
-  - Though I can't play with you until you come over...
-  neutralTextMessages: []
+  - How do you even forget something like this?? You literally sent me an IPHONE
+  neutralTextMessages:
+  - Well you sound excited about that
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

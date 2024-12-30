@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 2
   coldTextMessages:
-  - 'Aww '
-  - I love you too <3
+  - 'Ok fine whatever '
   hotTextMessages:
-  - Aww
-  - I love you too <3
+  - 'Ok fine whatever '
   neutralTextMessages:
   - Aww
   - I love you too <3
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

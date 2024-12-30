@@ -12,13 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
   m_Name: ReA-Ho1.6
   m_EditorClassIdentifier: 
-  emotionNeeded: 1
+  emotionNeeded: 3
   coldTextMessages:
-  - Oh i guess i did need one
-  - Thanks
+  - "Umm no it\u2019s not a teddy bear. This is an iphone"
+  - Oh my god did you send the teddy bear to a side piece?????
+  - Do you have a side piece???
+  - 'ARE YOU CHEATING ON ME??? '
+  - "YOU\u2019RE CHEATING ON ME"
+  - CHEATER
   hotTextMessages:
-  - Oh i guess i did need one
-  - But you could've asked first, it's a big buy
+  - "Umm no it\u2019s not a teddy bear. This is an iphone"
+  - Oh my god did you send the teddy bear to a side piece?????
+  - Do you have a side piece???
+  - 'ARE YOU CHEATING ON ME??? '
+  - "YOU\u2019RE CHEATING ON ME"
+  - CHEATER
   neutralTextMessages:
   - Oh i guess i did need one
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

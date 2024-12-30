@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - Wow I don't even know what to say to that
+  - Are you serious??
+  - "You couldn\u2019t have put more effort into giving me this gift???"
   hotTextMessages:
-  - Wow I don't even know what to say to that
+  - Are you serious??
+  - "You couldn\u2019t have put more effort into giving me this gift???"
   neutralTextMessages:
   - Wow I don't even know what to say to that
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 
