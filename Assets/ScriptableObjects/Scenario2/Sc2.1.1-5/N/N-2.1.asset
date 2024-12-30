@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-2.1
   m_EditorClassIdentifier: 
-  buttonText: No
+  buttonText: How are they even related ?
   actualText:
   - Why would my love for you be related to slugs?
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 78b67003286aa244594b64f7965cfaa2, type: 2}
   happinessEVChange: -1
-  hotEVChange: -1
+  hotEVChange: 1
   test1: []
   test2: 

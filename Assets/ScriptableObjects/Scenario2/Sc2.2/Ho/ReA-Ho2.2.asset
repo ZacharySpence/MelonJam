@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - K
+  - You dont want to???
   hotTextMessages:
-  - Too busy for even little ol' me?
-  - Alright
+  - Why not????
+  - "We\u2019ve been dating long enough already"
   neutralTextMessages: []
-  nextScenarioID: 1.4
+  nextScenarioID: 2.3.1
+  nextHotScenarioID: 2.3.1
+  nextColdScenarioID: 2.3.2

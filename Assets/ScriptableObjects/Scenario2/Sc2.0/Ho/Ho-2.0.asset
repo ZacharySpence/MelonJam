@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-2.0
   m_EditorClassIdentifier: 
-  buttonText: No
+  buttonText: No, ofc not
   actualText:
   - no
   - what
@@ -20,7 +20,6 @@ MonoBehaviour:
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 7f6e59ca8ba531347a6a9ca03e78f9b7, type: 2}
-  - {fileID: 11400000, guid: 1b06a360fa80c514bae92761f7f4ce28, type: 2}
   happinessEVChange: -1
   hotEVChange: 1
   test1: []

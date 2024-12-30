@@ -1,3 +1,4 @@
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +9,10 @@ public class EmotionValueManager : MonoBehaviour
     [SerializeField] public int happinessEV;
     [SerializeField] public int hotEV;
     [SerializeField] Image emotionSprite;
-    [SerializeField] Sprite happySprite, neutralSprite, angrySprite, hotSprite,coldSprite;
+    [SerializeField] Sprite Sprite1, Sprite2, Sprite3, Sprite4, Sprite5;
     public AHEmotion currentAHEmotion;
     public HCEmotion currentHCEmotion;
+    public TextMeshProUGUI txt;
     private void Awake()
     {
         if(Instance == null)
@@ -51,7 +53,33 @@ public class EmotionValueManager : MonoBehaviour
     }
     void ChangeEmotionSprite()
     {
-        emotionSprite.sprite = happinessEV > 0 ? happySprite : angrySprite;
+        
+        
+        if (happinessEV > 2 & hotEV > 0)
+        {
+            emotionSprite.sprite = Sprite1;
+            txt.text = "❤SWEETHEART❤";
+        }
+        else if (happinessEV >= 0 & hotEV >= 0)
+        {
+            emotionSprite.sprite = Sprite2;
+            txt.text = "Cutie Pie";
+        }
+        else if (happinessEV >= 0 & hotEV < 0)
+        {
+            emotionSprite.sprite = Sprite3;
+            txt.text = "Pookie";
+        }
+        else if (happinessEV < 0 & hotEV >= 0)
+        {
+            emotionSprite.sprite = Sprite4;
+            txt.text = "Babe";
+        }
+        else if (happinessEV < 0 & hotEV < 0)
+        {
+            emotionSprite.sprite = Sprite5;
+            txt.text = "Partner";
+        }
     }
 }
 

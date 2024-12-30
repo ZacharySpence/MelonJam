@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
+  m_Name: S - 2.3
+  m_EditorClassIdentifier: 
+  buttonText: I can't quit my job
+  actualText:
+  - I cant do it
+  - i dont want to quit my job here
+  isActive: 1
+  reactionMessages:
+  - {fileID: 11400000, guid: 6a9e58540df19c0408bd249a8e953a84, type: 2}
+  - {fileID: 11400000, guid: 915d0bb9171464d45894f24e4e31b461, type: 2}
+  happinessEVChange: 0
+  hotEVChange: -1
+  test1: []
+  test2: 

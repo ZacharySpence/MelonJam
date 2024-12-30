@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: ReA-2.0
   m_EditorClassIdentifier: 
   emotionNeeded: 1
-  coldTextMessages: []
-  hotTextMessages: []
+  coldTextMessages:
+  - "You don\u2019t even take me seriously. I\u2019m just asking a question."
+  - "I bet you don\u2019t even love me at all."
+  hotTextMessages:
+  - "You don\u2019t even take me seriously. I\u2019m just asking a question."
+  - "I bet you don\u2019t even love me at all."
   neutralTextMessages: []
   nextScenarioID: Sc2.1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

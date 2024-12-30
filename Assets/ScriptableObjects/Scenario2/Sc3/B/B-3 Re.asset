@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
+  m_Name: B-3 Re
+  m_EditorClassIdentifier: 
+  emotionNeeded: 1
+  coldTextMessages:
+  - "You don\u2019t even take me seriously. I\u2019m just asking a question."
+  - "I bet you don\u2019t even love me at all."
+  hotTextMessages:
+  - "You don\u2019t even take me seriously. I\u2019m just asking a question."
+  - "I bet you don\u2019t even love me at all."
+  neutralTextMessages:
+  - UGHH
+  - "YOU\u2019RE SO FRUSTRATING"
+  - "I HATE YOU I DON\u2019T WANT TO TALK TO YOU ANYMORE"
+  - "I HATE YOU I DON\u2019T WANT TO TALK TO YOU ANYMORE"
+  - WE ARE OVER
+  nextScenarioID: 0
+  nextHotScenarioID: 
+  nextColdScenarioID: 

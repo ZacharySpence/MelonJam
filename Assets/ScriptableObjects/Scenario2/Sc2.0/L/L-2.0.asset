@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: L-2.0
   m_EditorClassIdentifier: 
-  buttonText: Test?
+  buttonText: Is this a test ?
   actualText:
   - Whats up with this question
   - Is this some kind of test?
@@ -21,6 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a98889e49d2e8424f82fd47109e85705, type: 2}
   - {fileID: 11400000, guid: 121ed6fa3c1d6e941bb12bb34954e775, type: 2}
   happinessEVChange: 0
-  hotEVChange: -1
+  hotEVChange: 1
   test1: []
   test2: 

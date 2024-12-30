@@ -15,9 +15,9 @@ MonoBehaviour:
   ID: Sc2.1.2
   messageToDisplay: 
   messagesToDisplay:
-  - Oh
-  - K then
-  - You don't love me if i was changed?
+  - 
+  - 
+  - 
   optionsList:
   - {fileID: 11400000, guid: d630d239d2bfb824c970a2701f312260, type: 2}
   - {fileID: 11400000, guid: 17c65ac4eb06bd7448b21b068e2287fd, type: 2}

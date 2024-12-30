@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
+  m_Name: S3- 2.4
+  m_EditorClassIdentifier: 
+  buttonText: Just think about it
+  actualText:
+  - i just want you to think about it more before deciding
+  isActive: 1
+  reactionMessages:
+  - {fileID: 11400000, guid: 107aac417a8862345ac294629fe19fda, type: 2}
+  happinessEVChange: 1
+  hotEVChange: 1
+  test1: []
+  test2: 

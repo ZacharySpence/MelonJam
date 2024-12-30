@@ -41,7 +41,9 @@ public class ScenarioManager : MonoBehaviour
     [Header("Time")]
     [SerializeField] float timeTillIgnoreElapsed = 0f;
     [SerializeField] float timeTillIgnoreTriggered = 20f;
+    public PlaySound plSound;
     private Coroutine timerCoroutine;
+    public float optionDelay;
 
     [Header("Debugging")]
     [SerializeField] float delayBetweenMessages = 3f;
@@ -86,6 +88,7 @@ public class ScenarioManager : MonoBehaviour
             if (!msg.Equals(""))
             {
                 GameObject textMsg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
+                plSound.MsgSound();
                 textMessages.Add(textMsg);
                 textMsg.GetComponent<TextMessage>().Setup(msg);
             }
@@ -94,7 +97,17 @@ public class ScenarioManager : MonoBehaviour
         }
      
     }
+    private IEnumerator DestroyOptions()
+    {
+        yield return new WaitForSeconds(optionDelay);
+        foreach (GameObject button in optionButtons)
+        {
+            //empty it out and make inactive
+            button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
 
+            button.SetActive(false);
+        }
+    }
     //---To write player text message (different Sprite?)
     private IEnumerator CreatePlayerTextMessage(string message)
     {
@@ -103,6 +116,7 @@ public class ScenarioManager : MonoBehaviour
         GameObject msg = Instantiate(playerTextMessageGO, phonePanel).transform.GetChild(0).gameObject;
         
         textMessages.Add(msg);
+        plSound.MsgSound();  
         msg.GetComponent<TextMessage>().Setup(message);
         
 
@@ -165,13 +179,7 @@ public class ScenarioManager : MonoBehaviour
 
         Debug.Log("3.3 Clearing out buttons");
         //3.3 clearing option buttons 
-        foreach (GameObject button in optionButtons)
-        {
-            //empty it out and make inactive
-            button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
-            
-            button.SetActive(false);
-        }
+        StartCoroutine("DestroyOptions");
 
       
 
@@ -182,7 +190,9 @@ public class ScenarioManager : MonoBehaviour
             List<string> msgs = new List<string>();
             if(message.emotionNeeded == AHEmotion.Breakup)
             {
+                msgs = message.neutralTextMessages;
                 GameOver(optionChosen.name);
+
             }
             //Find the correct reaction based off Happiness/Angriness
             if (message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion || message.emotionNeeded == AHEmotion.Any)
@@ -226,8 +236,12 @@ public class ScenarioManager : MonoBehaviour
                         nextScenarioID = message.nextScenarioID;
                     }
                 }
+                if (nextScenarioID == "1")
+                { 
+                
+                }
             }
- 
+            
                     yield return CreateTextMessageCoroutine(msgs); //waits between each message
                 
                 break; //should only have one case in each option so no need to get 2 sets of messages!           

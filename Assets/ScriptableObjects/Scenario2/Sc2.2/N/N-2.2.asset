@@ -12,18 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-2.2
   m_EditorClassIdentifier: 
-  buttonText: Love
+  buttonText: You want me to move in with you ??!!
   actualText:
-  - Oh I'm so sorry
-  - I'll message you like you message me from now on...
-  - hey
-  - I like eating tacos at 3am
-  - look i need some attention right now
-  - did you think that I could be squished by a meteor if i go camping?
-  - Oh this reminds me, haven't given you my I love you quota for the month
+  - "who is \u201Cus\u201D"
+  - you want me to move in with you??
+  - i literally live in another country
   isActive: 1
   reactionMessages:
-  - {fileID: 11400000, guid: 69ece8106f1136946b72202a03374a18, type: 2}
-  - {fileID: 11400000, guid: 87582567a12f3734fa5536078a3d6a93, type: 2}
-  happinessEVChange: 2
+  - {fileID: 11400000, guid: 7aecc54bf3c77564e94a4e8f52ae5fbe, type: 2}
+  - {fileID: 11400000, guid: 90c8714431d535d448625011070130b2, type: 2}
+  happinessEVChange: -1
   hotEVChange: 1
+  test1: []
+  test2: 

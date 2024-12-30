@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Re-N2.0
   m_EditorClassIdentifier: 
   emotionNeeded: 3
-  coldTextMessages: []
-  hotTextMessages: []
+  coldTextMessages:
+  - "So you think loving me is stupid don\u2019t you"
+  hotTextMessages:
+  - "So you think loving me is stupid don\u2019t you"
   neutralTextMessages: []
   nextScenarioID: Sc2.1.5
+  nextHotScenarioID: 
+  nextColdScenarioID: 

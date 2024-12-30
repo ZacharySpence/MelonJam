@@ -15,8 +15,8 @@ MonoBehaviour:
   ID: Sc2.1.4
   messageToDisplay: 
   messagesToDisplay:
-  - You don't take me seriously. I'm just asking a question
-  - I bet you don't even love me at all
+  - 
+  - 
   optionsList:
   - {fileID: 11400000, guid: d630d239d2bfb824c970a2701f312260, type: 2}
   - {fileID: 11400000, guid: 17c65ac4eb06bd7448b21b068e2287fd, type: 2}

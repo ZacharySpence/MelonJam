@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: L-2.1++
   m_EditorClassIdentifier: 
-  buttonText: My bad
+  buttonText: My bad, sry
   actualText:
   - My bad
   - Sorry

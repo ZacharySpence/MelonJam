@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: ReB-B2.1++
   m_EditorClassIdentifier: 
   emotionNeeded: 4
-  coldTextMessages: []
-  hotTextMessages: []
-  neutralTextMessages: []
+  coldTextMessages:
+  - 
+  hotTextMessages:
+  - 
+  neutralTextMessages:
+  - FORGET THE SLUGS
+  - "YOU WANT ME TO BE YOUR \u201CDUDE\u201D????"
+  - "OH I\u2019LL BE YOUR F***ING DUDE"
   nextScenarioID: 
+  nextHotScenarioID: 
+  nextColdScenarioID: 

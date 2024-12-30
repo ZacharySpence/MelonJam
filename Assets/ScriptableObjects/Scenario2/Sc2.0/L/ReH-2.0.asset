@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: ReH-2.0
   m_EditorClassIdentifier: 
   emotionNeeded: 2
-  coldTextMessages: []
-  hotTextMessages: []
+  coldTextMessages:
+  - Why do you think everything is a test?
+  - " It\u2019s just a question"
+  hotTextMessages:
+  - Why do you think everything is a test?
+  - " It\u2019s just a question"
   neutralTextMessages: []
   nextScenarioID: Sc2.1.3
+  nextHotScenarioID: 
+  nextColdScenarioID: 

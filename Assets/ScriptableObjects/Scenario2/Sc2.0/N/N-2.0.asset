@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-2.0
   m_EditorClassIdentifier: 
-  buttonText: Stupid
+  buttonText: Stop asking stupid questions
   actualText:
   - Could you stop asking me stupid questions like this
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: c25ac585657338d408e486155bfaf16b, type: 2}
   happinessEVChange: 0
-  hotEVChange: -3
+  hotEVChange: -2
   test1: []
   test2: 

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
   m_Name: ReH-L2.1
   m_EditorClassIdentifier: 
-  emotionNeeded: 2
-  coldTextMessages: []
+  emotionNeeded: 3
+  coldTextMessages:
+  - 
   hotTextMessages: []
   neutralTextMessages: []
   nextScenarioID: Sc2.1.10
+  nextHotScenarioID: Sc2.1.9
+  nextColdScenarioID: Sc2.1.10

@@ -15,10 +15,11 @@ MonoBehaviour:
   buttonText: Sleeping
   actualText:
   - you just woke me up
-  - could you like look at the time b4 you text
-  - inconsiderate waffle
+  - could you stop disturbing me for once
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 79d0b4666c8fd3f4daabe86f16847e1d, type: 2}
   happinessEVChange: -1
   hotEVChange: -1
+  test1: []
+  test2: 

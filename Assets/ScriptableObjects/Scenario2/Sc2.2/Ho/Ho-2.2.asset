@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-2.2
   m_EditorClassIdentifier: 
-  buttonText: Busy
+  buttonText: You want to move in, Already ?
   actualText:
-  - Busy
+  - you want to move in together already?
   isActive: 1
   reactionMessages:
-  - {fileID: 11400000, guid: 4dbef0e47b7be634b864478b1109df1a, type: 2}
-  happinessEVChange: 0
-  hotEVChange: -1
+  - {fileID: 11400000, guid: 852430ac668df6244b06545968a1f38b, type: 2}
+  happinessEVChange: 2
+  hotEVChange: 0
+  test1: []
+  test2: 
