@@ -33,6 +33,12 @@ public class ScenarioManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> optionButtons; //have max 4 options?
     [SerializeField] private List<GameObject> textMessages;
+    [SerializeField] private string nextScenarioID;
+    [SerializeField] private List<OptionSO> allActiveOptions;
+    [Header("Time")]
+    [SerializeField] float timeTillIgnoreElapsed = 0f;
+    [SerializeField] float timeTillIgnoreTriggered = 20f;
+    private Coroutine timerCoroutine;
 
     [Header("Debugging")]
     [SerializeField] float delayBetweenMessages = 1f;
@@ -44,20 +50,35 @@ public class ScenarioManager : MonoBehaviour
         StartCoroutine(LoadScenarioCoroutine(FindScenarioWithId("Sc1.0")));
     }
 
+    //0.5 Start timetill ignore
+    private IEnumerator CountDownTillIngore()
+    {
+        while(timeTillIgnoreElapsed < timeTillIgnoreTriggered)
+        {
+            timeTillIgnoreElapsed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+         ResolveScenario(allActiveOptions.Find(x => x.name == "I" + currentScenario.name)); //so ISc1.0 for ignore on Sc1.0
+    }
     //1.Load the text message for the scenario
     private IEnumerator LoadScenarioCoroutine(ScenarioSO scenario)
     {
+        //StartCoroutine(CountDownTillIngore()); //Countdown Routine (gotta implement ignores
         currentScenario = scenario; //just to see current scenario
-        yield return StartCoroutine(CreateTextMessageCoroutine(scenario.messageToDisplay));
+        yield return StartCoroutine(CreateTextMessageCoroutine(scenario.messagesToDisplay));
         CreateOptions(scenario.optionsList);
     }
-    private IEnumerator CreateTextMessageCoroutine(string message)
+    private IEnumerator CreateTextMessageCoroutine(List<string> message)
     {
         //1 Create a "writing" animation sprite
         yield return new WaitForSeconds(delayBetweenMessages); //delay time
-        GameObject msg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
-        textMessages.Add(msg);
-        msg.GetComponent<TextMessage>().Setup(message);
+        foreach(string msg in message)
+        {
+            GameObject textMsg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
+            textMessages.Add(textMsg);
+            textMsg.GetComponent<TextMessage>().Setup(msg);
+        }
+     
     }
 
     //---To write player text message (different Sprite?)
@@ -104,6 +125,10 @@ public class ScenarioManager : MonoBehaviour
     }
     private IEnumerator ResolveScenarioCoroutine(OptionSO optionChosen)
     {
+        Debug.Log("3.0 Reset Time till ignore");
+        StopCoroutine(CountDownTillIngore());
+        timeTillIgnoreElapsed = 0f;
+
         Debug.Log("3.1 Affecting Emotional Values");
         //3.1 affect emotional values
         if(optionChosen.hotEVChange != 0)
@@ -140,34 +165,47 @@ public class ScenarioManager : MonoBehaviour
         foreach (ReactionSO message in optionChosen.reactionMessages)
         {
             List<string> msgs = new List<string>();
+            if(message.emotionNeeded == AHEmotion.Breakup)
+            {
+                GameOver(optionChosen.name);
+            }
             //Find the correct reaction based off Happiness/Angriness
-            if(message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion || message.emotionNeeded == AHEmotion.Any)
+            if (message.emotionNeeded == EmotionValueManager.Instance.currentAHEmotion || message.emotionNeeded == AHEmotion.Any)
             {
                 chosenReaction = message;
                 Debug.Log("Chosen Reaction Changed to:" + chosenReaction.name);
                 if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Hot)
                 {
                     msgs = message.hotTextMessages;
+                    if (message.nextHotScenarioID != null)
+                    {
+                        nextScenarioID = message.nextHotScenarioID;
+                    }
 
                 }
                 else if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Cold)
                 {
                     msgs = message.coldTextMessages;
+                    if (message.nextColdScenarioID != null)
+                    {
+                        nextScenarioID = message.nextColdScenarioID;
+                    }
                 }
                 else
                 {
-                    msgs = message.neutralTextMessages;
-                }
+                    msgs = message.hotTextMessages;
 
-                foreach (string msg in msgs)
-                {
-                    yield return CreateTextMessageCoroutine(msg); //waits between each message
+                    if (message.nextHotScenarioID != null)
+                    {
+                        nextScenarioID = message.nextHotScenarioID;
+                    }
+
                 }
-                break; //should only have one case in each option so no need to get 2 sets of messages!
             }
-            
-           
-            
+ 
+                    yield return CreateTextMessageCoroutine(msgs); //waits between each message
+                
+                break; //should only have one case in each option so no need to get 2 sets of messages!           
         }
         yield return new WaitForSeconds(1f);
 
@@ -188,7 +226,11 @@ public class ScenarioManager : MonoBehaviour
        
     }
 
-
+    //Game over <_ funky sfx, final text message
+    void GameOver(string ID = "0") //ID if game over via a option (so can do a specific response)
+    {
+        StopAllCoroutines();
+    }
     //Finding scenario via ID
     public ScenarioSO FindScenarioWithId(string id)
     {

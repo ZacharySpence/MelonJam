@@ -10,4 +10,6 @@ public class ReactionSO: ScriptableObject
     public List<string> hotTextMessages;
     public List<string> neutralTextMessages;
     public string nextScenarioID; //whichever scenario this leads to next
+    public string nextHotScenarioID;
+    public string nextColdScenarioID;
 }

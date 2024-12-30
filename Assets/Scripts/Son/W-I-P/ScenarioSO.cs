@@ -8,6 +8,7 @@ public class ScenarioSO : ScriptableObject
 {
     public string ID;
     public string messageToDisplay;
+    public List<string> messagesToDisplay;
     public List<OptionSO> optionsList;
 
      

@@ -60,7 +60,8 @@ public enum AHEmotion
     Neutral,
     Angry,
     Happy,
-    Any
+    Any,
+    Breakup
 
 }
 public enum HCEmotion

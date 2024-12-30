@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
   m_Name: ReH-L1.3
   m_EditorClassIdentifier: 
-  emotionNeeded: 1
+  emotionNeeded: 2
   coldTextMessages:
   - Work at this hour? oh boo that sucks
   - I'll leave you to it
