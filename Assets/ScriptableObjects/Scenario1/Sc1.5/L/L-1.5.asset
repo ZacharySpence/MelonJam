@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: L-1.5
   m_EditorClassIdentifier: 
-  buttonText: Boss
+  buttonText: I see, congrats ig
   actualText:
-  - Weird gift to get from your boss
-  - Who knows maybe he wants to do a late night draft with you?
+  - i see
+  - congrats ig
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 0068ed5bdd15df64d9e7a709b483e56e, type: 2}
-  happinessEVChange: 0
-  hotEVChange: -1
+  happinessEVChange: 1
+  hotEVChange: 1
+  test1: []
+  test2: 

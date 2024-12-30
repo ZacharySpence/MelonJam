@@ -14,10 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - Are you serious?
+  - Are you serious????
+  - ARE YOU TRYING TO KILL ME??
+  - YOU KNOW ABOUT MY ALLERGY !!
   hotTextMessages:
-  - Are you fucking serious?
-  - Don't tell me you forgot
+  - Are you serious????
+  - ARE YOU TRYING TO KILL ME??
+  - YOU KNOW ABOUT MY ALLERGY !!
   neutralTextMessages:
   - I'll go ask him shall I?
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

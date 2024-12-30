@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Sc1.7
   messageToDisplay: 'your special package OwO? And it''s all for me?(,,>_<,,) '
+  messagesToDisplay:
+  - Hmm really?
+  - ' I just received a package on my doorstep this morning.'
+  - Oh!!
+  - "Aww this is so sweet there\u2019s flowers and an iphone inside "
   optionsList:
   - {fileID: 11400000, guid: 6e11a5362e0a7144690e9e80b789385c, type: 2}
   - {fileID: 11400000, guid: 46b22ee234659f940b7de989ff131b7a, type: 2}

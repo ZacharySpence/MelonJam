@@ -13,7 +13,17 @@ MonoBehaviour:
   m_Name: Re-S1.4
   m_EditorClassIdentifier: 
   emotionNeeded: 3
-  coldTextMessages: []
-  hotTextMessages: []
+  coldTextMessages:
+  - Hmm really?
+  - ' I just received a package on my doorstep this morning. '
+  - Oh!!
+  - "Aww this is so sweet there\u2019s flowers and an iphone inside \u2764"
+  hotTextMessages:
+  - Hmm really?
+  - ' I just received a package on my doorstep this morning. '
+  - Oh!!
+  - "Aww this is so sweet there\u2019s flowers and an iphone inside \u2764"
   neutralTextMessages: []
   nextScenarioID: Sc1.7
+  nextHotScenarioID: 
+  nextColdScenarioID: 

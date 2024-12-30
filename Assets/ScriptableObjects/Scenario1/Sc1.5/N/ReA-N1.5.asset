@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
   m_Name: ReA-N1.5
   m_EditorClassIdentifier: 
-  emotionNeeded: 1
+  emotionNeeded: 3
   coldTextMessages:
-  - maybe I will with that attitude
+  - Hmm maybe
+  - I'll go ask him.
   hotTextMessages:
-  - Alright thats a great idea
-  - maybe all night long
+  - Hmm maybe
+  - I'll go ask him.
   neutralTextMessages: []
   nextScenarioID: Sc1.8
+  nextHotScenarioID: 
+  nextColdScenarioID: 

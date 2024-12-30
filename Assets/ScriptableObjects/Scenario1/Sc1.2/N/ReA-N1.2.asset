@@ -14,9 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 1
   coldTextMessages:
-  - Oh ha, ha, very funny
+  - We are literally dating.
+  - "What\u2019s wrong with me texting you every day??? "
+  - 'If anything you should be texting more '
   hotTextMessages:
-  - Oh ha, ha, very funny
+  - 'Fine '
+  - "I\u2019ll stop then"
   neutralTextMessages:
   - Oh ha, ha, very funny
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

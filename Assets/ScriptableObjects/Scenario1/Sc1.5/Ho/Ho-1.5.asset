@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-1.5
   m_EditorClassIdentifier: 
-  buttonText: Me
+  buttonText: Who sent it ?!!
   actualText:
-  - Surprise!
-  - I hope you like it
+  - who sent it???
+  - 'are you cheating on me '
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 17271b2912df2f84a90b5e3c3eb25e43, type: 2}
-  happinessEVChange: 1
-  hotEVChange: 1
+  happinessEVChange: -1
+  hotEVChange: -1
+  test1: []
+  test2: 

@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-1.5
   m_EditorClassIdentifier: 
-  buttonText: Guy
+  buttonText: Maybe it was yout boss
   actualText:
-  - Well if it was some other guy
-  - would you just run off and draft at theirs all night long?
+  - your boss sent it to you probably?
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 15cb96c4ab54b00408cd14a4524fd054, type: 2}
   - {fileID: 11400000, guid: 0434b5fbbfaa00043b4ae17871e06c11, type: 2}
-  happinessEVChange: -1
-  hotEVChange: -1
+  happinessEVChange: 0
+  hotEVChange: 1
+  test1: []
+  test2: 

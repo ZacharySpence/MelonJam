@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-1.7
   m_EditorClassIdentifier: 
-  buttonText: Yes
+  buttonText: Yeah, i frgt i sent that
   actualText:
-  - Yup it's all yours
-  - Obviously
+  - oh yeah
+  - I forgot i sent you that
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 9cd4371032d78624d81b3d696a860a99, type: 2}
-  happinessEVChange: 0
+  happinessEVChange: 1
   hotEVChange: -1
+  test1: []
+  test2: 

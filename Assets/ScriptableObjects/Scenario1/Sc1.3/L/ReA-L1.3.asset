@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 1
   coldTextMessages:
-  - 'Yeah you go back to your ''work'' '
-  - Jerk
+  - OH SCREW YOU
+  - YOU JERK
+  - I LITERALLY MAKE MORE MONEY THAN YOU
   hotTextMessages:
-  - 'Yeah you go back to your ''work'' '
-  - Jerk
+  - OH SCREW YOU
+  - YOU JERK
+  - I LITERALLY MAKE MORE MONEY THAN YOU
   neutralTextMessages:
   - 'Yeah you go back to your ''work'' '
   - Jerk
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

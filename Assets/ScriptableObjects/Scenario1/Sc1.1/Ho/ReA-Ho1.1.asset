@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 1
   coldTextMessages:
-  - Oh my god, I'm literally just asking you to reply. Do you not care about me at
-    all?
+  - "Oh my god, I\u2019m literally just asking you to reply. Do you not care about
+    me at all????"
   hotTextMessages:
-  - Oh my god, I'm literally just asking you to reply. Do you not care about me at
-    all?
+  - "Oh my god, I\u2019m literally just asking you to reply. Do you not care about
+    me at all????"
   neutralTextMessages:
-  - Oh my god, I'm literally just asking you to reply. Do you not care about me at
-    all?
-  nextScenarioID: Sc1.2.2
+  - "Oh my god, I\u2019m literally just asking you to reply. Do you not care about
+    me at all????"
+  nextScenarioID: Sc 1.2.3
+  nextHotScenarioID: 
+  nextColdScenarioID: 

@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 2
   coldTextMessages:
-  - I get it, ttyl
+  - 'Yeah sure '
+  - Whatever
   hotTextMessages:
-  - Alrighty alrighty i got ttyl
+  - Ok fine.
+  - "But I want you to text me more often from now on\uFFFD"
   neutralTextMessages:
   - Alrighty alrighty i got ttyl
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

@@ -15,6 +15,10 @@ MonoBehaviour:
   ID: Sc1.5
   messageToDisplay: There was a package on my doorstep this morning. ooh is that
     the new Bloomburrow draft set! Did you send it!?
+  messagesToDisplay:
+  - Well there was a package on my doorstep this morning.
+  - 'I just opened it and it had flowers and an iphone inside '
+  - "(\uFF61\u2665\u203F\u2665\uFF61)"
   optionsList:
   - {fileID: 11400000, guid: fd4f7ca38ae941b489f90d9f6c63145d, type: 2}
   - {fileID: 11400000, guid: 044385bab3d76f14797c39e1d66f774d, type: 2}

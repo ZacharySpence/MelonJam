@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 3
   coldTextMessages:
-  - Let me get my change
+  - 'Ok : /'
   hotTextMessages:
-  - 'Kissies O_O? '
-  - Oh i got plenty of those banked up for when we see eachother
+  - 'Ok : / '
   neutralTextMessages:
   - Let me get my change
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

@@ -16,7 +16,9 @@ MonoBehaviour:
   coldTextMessages:
   - K
   hotTextMessages:
-  - Too busy for even little ol' me?
-  - Alright
+  - 'Too busy to even text me?? '
+  - K
   neutralTextMessages: []
   nextScenarioID: 1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

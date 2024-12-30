@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Sc1.4
   messageToDisplay: Babe, did you send me a package 0_0?
+  messagesToDisplay:
+  - Babe, did you send me a package? 0_0
   optionsList:
   - {fileID: 11400000, guid: 94df8646b55321b4c8427b7a20b1f0eb, type: 2}
   - {fileID: 11400000, guid: bb32ac22f288a79479b1492470e598ce, type: 2}

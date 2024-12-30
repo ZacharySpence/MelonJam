@@ -218,14 +218,7 @@ public class ScenarioManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("3.5 Clearing Text Messages");
-        //3.5 Clear Text messages (possibly remove this to have a scroll rect
-        foreach(GameObject text in textMessages)
-        {
-          //  Destroy(text);
-            
-        }
-        textMessages.Clear();
+
         yield return new WaitForSeconds(delayToNextScenario); //delay between next textMessage (do we need since CTMC has a delay too)
         Debug.Log("3.6 Load next Scenario");
         //3.6 Load next Scenario

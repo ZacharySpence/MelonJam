@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionNeeded: 2
   coldTextMessages:
-  - Alright Robot
-  - Keep your screws tighter
-  - And dont forget to message me okay
+  - Aww
+  - 'I love you too '
   hotTextMessages:
-  - Ooh does the improved version come with...
-  - other upgrades...besides faster messaging
+  - Aww
+  - 'I love you too '
   neutralTextMessages:
   - BUG
   nextScenarioID: Sc1.4
+  nextHotScenarioID: 
+  nextColdScenarioID: 

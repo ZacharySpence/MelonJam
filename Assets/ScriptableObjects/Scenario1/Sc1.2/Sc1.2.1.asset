@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Sc1.2.1
   messageToDisplay: You barely message me anymore? something up?
+  messagesToDisplay:
+  - 'You barely message me anymore? '
+  - something up?
   optionsList:
   - {fileID: 11400000, guid: bb008e280383b4e4684492b17adb7d2c, type: 2}
   - {fileID: 11400000, guid: f4a4643cf75f4c54c8a4ae8abb933474, type: 2}

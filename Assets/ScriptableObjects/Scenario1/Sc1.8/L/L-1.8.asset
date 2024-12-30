@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: L-1.8
   m_EditorClassIdentifier: 
-  buttonText: Battery
+  buttonText: My phone died
   actualText:
-  - Phone died
-  - Sorry
+  - my phone died
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 5f8c614c33f052248b6d8a272db1c248, type: 2}
   - {fileID: 11400000, guid: fda759b7faed32e47afda6c1ab6a7dba, type: 2}
   happinessEVChange: 0
   hotEVChange: -1
+  test1: []
+  test2: 

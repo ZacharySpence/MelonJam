@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: Ho-1.1
   m_EditorClassIdentifier: 
-  buttonText: Yes
+  buttonText: Ok.what
   actualText:
-  - Yeah
-  - whats up
+  - 'ok '
+  - what do you want
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: d121891c3b1859d41833269f1d605bed, type: 2}
   - {fileID: 11400000, guid: 999874a4286d2f54c8203641840a84d3, type: 2}
   happinessEVChange: 1
   hotEVChange: -1
+  test1: []
+  test2: 

@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d26b38d0827f9a4da27c4711dc7fd73, type: 3}
-  m_Name: ReA-S1.2
+  m_Name: Re-HHo1.5
   m_EditorClassIdentifier: 
-  emotionNeeded: 1
+  emotionNeeded: 2
   coldTextMessages:
-  - K
-  - "Just don\u2019t do it next time or else : )"
+  - NO???
+  - 'Why would you even say that '
+  - I would never cheat on you
   hotTextMessages:
-  - K
-  - "Just don\u2019t do it next time or else : )"
-  neutralTextMessages:
-  - BUG
-  nextScenarioID: Sc1.4
+  - NO???
+  - 'Why would you even say that '
+  - I would never cheat on you
+  neutralTextMessages: []
+  nextScenarioID: Sc1.8
   nextHotScenarioID: 
   nextColdScenarioID: 

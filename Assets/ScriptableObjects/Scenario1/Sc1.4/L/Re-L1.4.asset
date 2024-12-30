@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Re-L1.4
   m_EditorClassIdentifier: 
   emotionNeeded: 3
-  coldTextMessages: []
-  hotTextMessages: []
+  coldTextMessages:
+  - Well there was a package on my doorstep this morning.
+  - I just opened it and it had flowers and an iphone inside
+  hotTextMessages:
+  - Well there was a package on my doorstep this morning.
+  - 'I just opened it and it had flowers and an iphone inside '
   neutralTextMessages: []
   nextScenarioID: Sc1.5
+  nextHotScenarioID: 
+  nextColdScenarioID: 

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Re-N1.4
   m_EditorClassIdentifier: 
   emotionNeeded: 3
-  coldTextMessages: []
-  hotTextMessages: []
+  coldTextMessages:
+  - Nope, not yet
+  - what did you send me ?
+  hotTextMessages:
+  - Nope, not yet
+  - what did you send me ?
   neutralTextMessages: []
   nextScenarioID: Sc1.6
+  nextHotScenarioID: 
+  nextColdScenarioID: 

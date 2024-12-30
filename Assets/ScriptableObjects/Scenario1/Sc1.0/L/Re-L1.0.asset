@@ -16,6 +16,10 @@ MonoBehaviour:
   coldTextMessages:
   - I'm sorry
   - I didn't mean to wake you up
-  hotTextMessages: []
+  hotTextMessages:
+  - I'm sorry
+  - I didn't mean to wake you up
   neutralTextMessages: []
   nextScenarioID: Sc1.1
+  nextHotScenarioID: 
+  nextColdScenarioID: 

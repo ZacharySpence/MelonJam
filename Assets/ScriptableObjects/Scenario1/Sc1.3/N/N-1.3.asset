@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: N-1.3
   m_EditorClassIdentifier: 
-  buttonText: Alone
+  buttonText: What, can't i have some alone time
   actualText:
-  - Can't you like get off my back and let me chill
+  - what
+  - am i not allowed to have alone time anymore
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: cf7fa589cb69274488d8990e49a7be2f, type: 2}
   happinessEVChange: 0
   hotEVChange: -1
+  test1: []
+  test2: 

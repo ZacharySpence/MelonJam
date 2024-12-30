@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee9e519a4623574da5ffef013a2e4c0, type: 3}
   m_Name: S-1.6
   m_EditorClassIdentifier: 
-  buttonText: Flowers
+  buttonText: I sent you roses
   actualText:
-  - I got you your favourite
-  - Roses
+  - I sent you roses
   isActive: 1
   reactionMessages:
   - {fileID: 11400000, guid: 36485fbfe8ca5bc449e8f1ef9a707d44, type: 2}
-  happinessEVChange: 0
-  hotEVChange: -1
+  happinessEVChange: -1
+  hotEVChange: 0
+  test1: []
+  test2: 
