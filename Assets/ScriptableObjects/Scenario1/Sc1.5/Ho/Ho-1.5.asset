@@ -18,6 +18,7 @@ MonoBehaviour:
   - 'are you cheating on me '
   isActive: 1
   reactionMessages:
+  - {fileID: 11400000, guid: 6dd865fb4f5ed834585759bb892cd25e, type: 2}
   - {fileID: 11400000, guid: 17271b2912df2f84a90b5e3c3eb25e43, type: 2}
   happinessEVChange: -1
   hotEVChange: -1

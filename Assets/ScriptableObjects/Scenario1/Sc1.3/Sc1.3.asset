@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Sc1.3
   messageToDisplay: So you have time for other stuff but not me? your partner?
   messagesToDisplay:
-  - So you have time for other stuff but not me? your partner?
+  - 
   optionsList:
   - {fileID: 11400000, guid: 1e22f08d3fc271f4d90ef31a54771308, type: 2}
   - {fileID: 11400000, guid: 9795cc3daf2363c488cda575c7142940, type: 2}

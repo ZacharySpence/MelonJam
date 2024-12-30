@@ -15,8 +15,8 @@ MonoBehaviour:
   ID: Sc1.6
   messageToDisplay: No but I always deserve presents, what did you get me?
   messagesToDisplay:
-  - Nope, not yet
-  - What did you send me?? 0_0
+  - 
+  - 
   optionsList:
   - {fileID: 11400000, guid: 8eee5a07e905cc9419ef570756ef08cf, type: 2}
   - {fileID: 11400000, guid: 102ae33c50e299f40beb7eaebd6c5f9b, type: 2}

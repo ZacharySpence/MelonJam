@@ -18,7 +18,7 @@ MonoBehaviour:
   - congrats ig
   isActive: 1
   reactionMessages:
-  - {fileID: 11400000, guid: 0068ed5bdd15df64d9e7a709b483e56e, type: 2}
+  - {fileID: 11400000, guid: f0b3c69388ee6154c9f24cd3c44ed1eb, type: 2}
   happinessEVChange: 1
   hotEVChange: 1
   test1: []

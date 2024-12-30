@@ -16,7 +16,9 @@ MonoBehaviour:
   coldTextMessages:
   - Oh.
   - Well I hope you're having a nice time without me :)
-  hotTextMessages: []
+  hotTextMessages:
+  - Oh,
+  - Well I hope you're having a nice time without me :)
   neutralTextMessages:
   - Oh.
   - Well I hope you're having a nice time without me :)

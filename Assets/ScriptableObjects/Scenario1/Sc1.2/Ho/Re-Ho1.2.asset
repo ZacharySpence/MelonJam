@@ -19,6 +19,6 @@ MonoBehaviour:
   - 'Too busy to even text me?? '
   - K
   neutralTextMessages: []
-  nextScenarioID: 1.4
+  nextScenarioID: Sc1.4
   nextHotScenarioID: 
   nextColdScenarioID: 

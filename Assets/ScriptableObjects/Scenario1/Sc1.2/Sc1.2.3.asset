@@ -15,10 +15,9 @@ MonoBehaviour:
   ID: Sc1.2.3
   messageToDisplay: 
   messagesToDisplay:
-  - "Oh my god, I\u2019m literally just asking you to reply. Do you not care about
-    me at all????"
+  - 
   optionsList:
   - {fileID: 11400000, guid: bb008e280383b4e4684492b17adb7d2c, type: 2}
-  - {fileID: 11400000, guid: f4a4643cf75f4c54c8a4ae8abb933474, type: 2}
   - {fileID: 11400000, guid: 1847dc0fe8deb844e9a24778a234e46a, type: 2}
+  - {fileID: 11400000, guid: f4a4643cf75f4c54c8a4ae8abb933474, type: 2}
   - {fileID: 11400000, guid: 53e461e577e95054aa14168dd961ea48, type: 2}

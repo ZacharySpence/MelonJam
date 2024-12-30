@@ -37,13 +37,14 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private List<OptionSO> allActiveOptions;
 
     [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private float scrollSpeed;
     [Header("Time")]
     [SerializeField] float timeTillIgnoreElapsed = 0f;
     [SerializeField] float timeTillIgnoreTriggered = 20f;
     private Coroutine timerCoroutine;
 
     [Header("Debugging")]
-    [SerializeField] float delayBetweenMessages = 1f;
+    [SerializeField] float delayBetweenMessages = 3f;
     [SerializeField] float delayToNextScenario = 5f;
     [SerializeField] ReactionSO chosenReaction = null;
     private void Start()
@@ -53,7 +54,7 @@ public class ScenarioManager : MonoBehaviour
     }
     private void Update()
     {
-        scrollRect.verticalNormalizedPosition = 0f; //keep scroll rect at bottom;
+        scrollRect.verticalNormalizedPosition -= scrollSpeed; //keep scroll rect at bottom;
     }
 
     //0.5 Start timetill ignore
@@ -78,12 +79,17 @@ public class ScenarioManager : MonoBehaviour
     {
         
         //1 Create a "writing" animation sprite
-        yield return new WaitForSeconds(delayBetweenMessages); //delay time
+       
         foreach(string msg in message)
         {
-            GameObject textMsg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
-            textMessages.Add(textMsg);
-            textMsg.GetComponent<TextMessage>().Setup(msg);
+            yield return new WaitForSeconds(delayBetweenMessages); //delay time
+            if (!msg.Equals(""))
+            {
+                GameObject textMsg = Instantiate(textMessageGO, phonePanel).transform.GetChild(0).gameObject;
+                textMessages.Add(textMsg);
+                textMsg.GetComponent<TextMessage>().Setup(msg);
+            }
+            
            
         }
      
@@ -186,29 +192,39 @@ public class ScenarioManager : MonoBehaviour
                 if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Hot)
                 {
                     msgs = message.hotTextMessages;
-                    if (message.nextHotScenarioID != null)
+                    if (!message.nextHotScenarioID.Equals(""))
                     {
                         nextScenarioID = message.nextHotScenarioID;
                     }
-
+                    else
+                    {
+                        nextScenarioID = message.nextScenarioID;
+                    }
                 }
                 else if (EmotionValueManager.Instance.currentHCEmotion == HCEmotion.Cold)
                 {
                     msgs = message.coldTextMessages;
-                    if (message.nextColdScenarioID != null)
+                    if (!message.nextHotScenarioID.Equals(""))
                     {
                         nextScenarioID = message.nextColdScenarioID;
+                    }
+                    else
+                    {
+                        nextScenarioID = message.nextScenarioID;
                     }
                 }
                 else
                 {
                     msgs = message.hotTextMessages;
 
-                    if (message.nextHotScenarioID != null)
+                    if (!message.nextHotScenarioID.Equals(""))
                     {
                         nextScenarioID = message.nextHotScenarioID;
                     }
-
+                    else
+                    {
+                        nextScenarioID = message.nextScenarioID;
+                    }
                 }
             }
  
@@ -236,7 +252,6 @@ public class ScenarioManager : MonoBehaviour
     //Finding scenario via ID
     public ScenarioSO FindScenarioWithId(string id)
     {
-       
        foreach(ScenarioSO scenario in scenarioList)
         {
             Debug.Log(id+":"+scenario.ID);

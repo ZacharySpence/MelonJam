@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Sc1.2.2
   messageToDisplay: 
   messagesToDisplay:
-  - "Why haven\u2019t you been messaging me lately?"
+  - 
   optionsList:
   - {fileID: 11400000, guid: bb008e280383b4e4684492b17adb7d2c, type: 2}
   - {fileID: 11400000, guid: f4a4643cf75f4c54c8a4ae8abb933474, type: 2}
